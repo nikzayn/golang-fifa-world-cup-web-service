@@ -26,6 +26,7 @@ func ListWinners(res http.ResponseWriter, req *http.Request) {
 		if err != nil {
 			res.WriteHeader(http.StatusBadRequest)
 			res.Write(filteredWinners)
+			return
 		}
 	}
 }
